@@ -71,7 +71,7 @@ with col1:
     sat = fdf["Satisfaction"].dropna().value_counts().sort_index().reset_index()
     sat.columns = ["Score","Count"]
     fig = px.bar(sat, x="Score", y="Count", color="Score",
-                 color_continuous_scale="Reds", template="plotly_white")
+                 color_continuous_scale="Oranges", template="plotly_white")
     fig.update_layout(showlegend=False, coloraxis_showscale=False)
     st.plotly_chart(fig, use_container_width=True)
 
